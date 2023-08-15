@@ -25,18 +25,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # - uses: 42Crunch/api-security-audit-action@v3
-      #   name: Run on community
-      #   with:
-      #     api_token: ${{ secrets.API_TOKEN }}
-      #     min-score: 85
-      #     platform-url: https://platform.42crunch.com
-      #     log-level: DEBUG
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
 
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
       - uses: 42Crunch/api-security-audit-action@v3
-        name: Run on enterprise
         with:
-          api_token: ${{ secrets.API_TOKEN_2 }}
+          api-token: ${{ secrets.API_TOKEN }}
           min-score: 85
-          platform-url: https://us.42crunch.cloud
+          platform-url: https://platform.42crunch.com
           log-level: DEBUG
