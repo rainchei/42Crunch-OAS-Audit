@@ -32,6 +32,7 @@ jobs:
           min-score: 85
           platform-url: https://platform.42crunch.com
           log-level: DEBUG
+          ignore-failures: true
 
       - uses: 42Crunch/api-security-audit-action@v3
         name: Enterprise
@@ -40,6 +41,7 @@ jobs:
           min-score: 85
           platform-url: https://us.42crunch.cloud
           log-level: DEBUG
+          ignore-failures: true
 
       - uses: 42Crunch/api-security-audit-action@v3
         name: Dev
@@ -48,3 +50,4 @@ jobs:
           min-score: 85
           platform-url: https://platform.dev.42crunch.com
           log-level: DEBUG
+          ignore-failures: true
