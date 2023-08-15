@@ -51,3 +51,12 @@ jobs:
           platform-url: https://platform.dev.42crunch.com
           log-level: DEBUG
           ignore-failures: true
+
+      - uses: 42Crunch/api-security-audit-action@v3
+        name: Demolabs
+        with:
+          api-token: ${{ secrets.API_TOKEN_4 }}
+          min-score: 85
+          platform-url: https://demolabs.42crunch.cloud
+          log-level: DEBUG
+          ignore-failures: true
