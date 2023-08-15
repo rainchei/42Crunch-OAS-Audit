@@ -1,0 +1,11 @@
+jobs:
+  api_audit_job:
+    runs-on: ubuntu-latest
+    name: Audit OpenAPI files
+    steps:
+      - uses: 42Crunch/api-security-audit-action@v3
+        with:
+          api_token: ${{ secrets.API_TOKEN }}
+          min-score: 85
+          platform-url: https://platform.42crunch.com
+          log-level: DEBUG
