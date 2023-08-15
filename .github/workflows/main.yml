@@ -40,3 +40,11 @@ jobs:
           min-score: 85
           platform-url: https://us.42crunch.cloud
           log-level: DEBUG
+
+      - uses: 42Crunch/api-security-audit-action@v3
+        name: Dev
+        with:
+          api-token: ${{ secrets.API_TOKEN_3 }}
+          min-score: 85
+          platform-url: https://platform.dev.42crunch.com
+          log-level: DEBUG
