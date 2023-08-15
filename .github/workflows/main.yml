@@ -22,9 +22,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
       - uses: 42Crunch/api-security-audit-action@v3
+        name: Run on community
         with:
-          api-token: ${{ secrets.API_TOKEN }}
+          api_token: ${{ secrets.API_TOKEN }}
           min-score: 85
-          # platform-url: https://us.42crunch.cloud
+          platform-url: https://platform.42crunch.com
+          log-level: DEBUG
+
+      - uses: 42Crunch/api-security-audit-action@v3
+        name: Run on enterprise
+        with:
+          api_token: ${{ secrets.API_TOKEN_2 }}
+          min-score: 85
+          platform-url: https://us.42crunch.cloud
           log-level: DEBUG
