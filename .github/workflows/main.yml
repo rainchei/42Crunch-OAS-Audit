@@ -26,17 +26,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: 42Crunch/api-security-audit-action@v3
-        name: Run on community
         with:
           api_token: ${{ secrets.API_TOKEN }}
           min-score: 85
-          platform-url: https://platform.42crunch.com
-          log-level: DEBUG
-
-      - uses: 42Crunch/api-security-audit-action@v3
-        name: Run on enterprise
-        with:
-          api_token: ${{ secrets.API_TOKEN_2 }}
-          min-score: 85
-          platform-url: https://us.42crunch.cloud
           log-level: DEBUG
