@@ -25,23 +25,23 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - uses: 42Crunch/api-security-audit-action@v3
-        name: Community
-        with:
-          api-token: ${{ secrets.API_TOKEN }}
-          min-score: 85
-          platform-url: https://platform.42crunch.com
-          log-level: DEBUG
-          ignore-failures: true
+      # - uses: 42Crunch/api-security-audit-action@v3
+      #   name: Community
+      #   with:
+      #     api-token: ${{ secrets.API_TOKEN }}
+      #     min-score: 85
+      #     platform-url: https://platform.42crunch.com
+      #     log-level: DEBUG
+      #     ignore-failures: true
 
-      - uses: 42Crunch/api-security-audit-action@v3
-        name: Enterprise
-        with:
-          api-token: ${{ secrets.API_TOKEN_2 }}
-          min-score: 85
-          platform-url: https://us.42crunch.cloud
-          log-level: DEBUG
-          ignore-failures: true
+      # - uses: 42Crunch/api-security-audit-action@v3
+      #   name: Enterprise
+      #   with:
+      #     api-token: ${{ secrets.API_TOKEN_2 }}
+      #     min-score: 85
+      #     platform-url: https://us.42crunch.cloud
+      #     log-level: DEBUG
+      #     ignore-failures: true
 
       - uses: 42Crunch/api-security-audit-action@v3
         name: Dev
@@ -52,11 +52,11 @@ jobs:
           log-level: DEBUG
           ignore-failures: true
 
-      - uses: 42Crunch/api-security-audit-action@v3
-        name: Demolabs
-        with:
-          api-token: ${{ secrets.API_TOKEN_4 }}
-          min-score: 85
-          platform-url: https://demolabs.42crunch.cloud
-          log-level: DEBUG
-          ignore-failures: true
+      # - uses: 42Crunch/api-security-audit-action@v3
+      #   name: Demolabs
+      #   with:
+      #     api-token: ${{ secrets.API_TOKEN_4 }}
+      #     min-score: 85
+      #     platform-url: https://demolabs.42crunch.cloud
+      #     log-level: DEBUG
+      #     ignore-failures: true
